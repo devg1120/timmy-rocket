@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="nav-panel">
+        <h1>Timmy</h1>
+        <ul>
+            <li>{{#link-to "index"}}Overview{{/link-to}}</li>
+            <li>{{#link-to "projects"}}Projects{{/link-to}}</li>
+            <li>{{#link-to "timer"}}Timer{{/link-to}}</li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <ul>
+                {{#if session.isAuthenticated }}
+                    <li><a href="#" {{action "invalidate"}}>Log out</a></li>
+                {{ else }}
+                    <li>{{#link-to "login"}}Login{{/link-to}}</li>
+               {{/if}}
+           </ul>
+        </div>
+        {{outlet}}
+    </div>
+</div>

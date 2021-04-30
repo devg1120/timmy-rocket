@@ -1,0 +1,37 @@
+<div class="dashboard">
+    <div class="dashboard-item full massive-half">
+        <div class="dashboard-item-title">
+            <h3>Gantt</h3>
+        </div>
+        <div class="dashboard-item-content">
+            {{gantt-chart activities=model.activities}}
+        </div>
+    </div>
+
+    <div class="dashboard-item full massive-half">
+        <div class="dashboard-item-title">
+            <h3>Tags</h3>
+        </div>
+        <div class="dashboard-item-content">
+            {{tags-chart activities=model.activities}}
+        </div>
+    </div>
+
+    <div class="dashboard-item full massive-half half-right">
+        <div class="dashboard-item-title">
+            <h3>Days</h3>
+        </div>
+        <div class="dashboard-item-content">
+            {{days-chart activities=model.activities}}
+        </div>
+    </div>
+
+    <div class="dashboard-item full massive-half">
+        <div class="dashboard-item-title">
+            <h3>Hours</h3>
+        </div>
+        <div class="dashboard-item-content">
+            {{hours-chart activities=model.activities}}
+        </div>
+    </div>
+</div>

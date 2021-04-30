@@ -1,0 +1,26 @@
+<div class="title">
+    <h2>{{model.title}}</h2>
+    <div class="subtitle action-group">
+        <div class="action-group">
+            {{#link-to "projects.edit" model.id}}{{fa-icon "pencil"}}{{/link-to}}
+            {{delete-button delete=(action "delete" model)}}
+        </div>
+    </div>
+    <div class="subtitle">{{model.description}}</div>
+</div>
+
+<div class="tabbed">
+    <div class="tabs-container">
+        <div class="tabs">
+            {{#link-to "projects.view.index" class="tab"}}Info{{/link-to}}
+            {{#link-to "projects.view.charts" model.id class="tab"}}Charts{{/link-to}}
+        </div>
+    </div>
+
+    <div class="tabbed-content">
+        <div class="inner-container">
+            {{outlet}}
+        </div>
+
+    </div>
+</div>
